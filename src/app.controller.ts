@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, Param,HttpCode } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller('calculadora')
@@ -24,5 +24,10 @@ export class AppController {
   @Get("elevacion/:num1/:num2")
   getElevacion(@Param('num1') num1:number,@Param('num2') num2:number): string {
     return this.appService.getElevacion(num1,num2);
+  }
+  @Get("healthcheck")
+  @HttpCode(200)
+  getHealtcheck (): string {
+    return this.appService.getHealtcheck();
   }
 }

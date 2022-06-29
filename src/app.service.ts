@@ -17,4 +17,7 @@ export class AppService {
   getElevacion(num1:number,num2:number): string {
     return String(Number(num1) ** Number(num2));
   }
+  getHealtcheck (): string {
+    return String("All OK ");
+  }
 }
