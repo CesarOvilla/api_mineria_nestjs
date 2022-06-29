@@ -8,7 +8,6 @@ phases:
       - n 16
   pre_build:
     commands:
-      - n
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - REPOSITORY_URI=851724008887.dkr.ecr.us-east-2.amazonaws.com/apimineria
