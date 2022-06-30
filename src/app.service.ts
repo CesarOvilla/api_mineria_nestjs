@@ -18,6 +18,6 @@ export class AppService {
     return String(Number(num1) ** Number(num2));
   }
   getHealtcheck (): string {
-    return String("All OK ");
+    return String("Estamos en la clase de christian");
   }
 }
